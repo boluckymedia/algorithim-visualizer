@@ -234,10 +234,19 @@ async function partition(barArray, graph, delay, start, end) {
     barArray[end] = temp;
     return i + 1;
 }
+/*
+function createNode(val) {
+    const node = document.createElement("div");
+    node.classList.add("node");
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    const value = document.createElement("h3");
+    value.textContent = val;
+    node.appendChild(value);
+
+    const 
+
 }
+*/
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -247,6 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const generateBtn = document.getElementById("generateBtn");
     const startBtn = document.getElementById("startSort");
 
+
     let barArray = generateBars(graph, 15);
     
     generateBtn.addEventListener("click", () => {
@@ -255,12 +265,10 @@ document.addEventListener("DOMContentLoaded", () => {
         randomize(barArray, graph);
 
     }); 
-
-    let delay = 1;
     
     startBtn.addEventListener("click", async () => {
         const sortType = document.getElementById("sortSelect").value;
-
+        const delay = document.getElementById("speed").value;
         switch(sortType) {
             case "bubble":
                 await bubbleSort(barArray, graph, delay);
@@ -280,4 +288,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+/*
+    const treeGraph = document.getElementById("tree");
+    const nodeInput = document.getElementById("insert");
+    const generateTree = document.getElementById("generateTree");
+    let treeArr = [];
+    let nodeIdx = 0;
+
+    generateTree.addEventListener("click", async () => {
+        const input = nodeInput.value;
+        treeArr.push(...(input.split(',').map(item => item.trim()).filter(item => item !== "")));
+        for(; nodeIdx < treeArr.length; nodeIdx++) {
+            let currNode = createNode(treeArr[nodeIdx]);
+            treeArr[nodeIdx] = {val: treeArr[nodeIdx], leftChild: -1, rightChild: -1, node: currNode};
+        }
+    });
+
+*/
 });
+
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
