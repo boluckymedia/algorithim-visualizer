@@ -1,0 +1,22 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+
+.graph {
+    width: 90%;
+    aspect-ratio: 1 / 0.6;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    background: #f9f9f9;
+}
+
+.bar {
+    background-color: royalblue;
+    transition: height 0.2s ease, background-color 0.2s ease;
+    z-index: 999;
+}

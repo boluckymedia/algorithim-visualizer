@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <h1>Algorithim Visualizer</h1>
+    </section>
+    <section class="sorts">
+        <input type="number" id="barCount" min="5" max="10000" value="100">
+        <button id="generateBtn">Generate</button>
+        <label for="sortSelect">Choose A Sort</label>
+        <select id="sortSelect">
+            <option value="bubble">Bubble Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="quick">Quick Sort</option>
+            <option value="selection">Selection Sort</option>
+        </select>
+        <div class="graph" id="graph">
+        </div>
+        <button id="startSort">Sort</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
