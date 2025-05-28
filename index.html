@@ -21,9 +21,18 @@
             <option value="quick">Quick Sort</option>
             <option value="selection">Selection Sort</option>
         </select>
+        <label for="speed">Speed(fast to slow):</label>
+        <input type="range" id="speed" min="1" max="200" step="5" value="50">
         <div class="graph" id="graph">
         </div>
         <button id="startSort">Sort</button>
+    </section>
+    <section class="tree">
+        <input type="number" id="insert" value="1">
+        <button id="generateTree">Generate Tree</button>
+        <button id="delete-tree">Restart</button>
+        <div class="tree-graph" id="tree-graph">
+        </div>
     </section>
     <script src="script.js"></script>
 </body>
