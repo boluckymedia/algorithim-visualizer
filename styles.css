@@ -20,3 +20,52 @@ body {
     transition: height 0.2s ease, background-color 0.2s ease;
     z-index: 999;
 }
+
+#tree-graph {
+    position: relative;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: auto;
+    background-color: lightgrey;
+  }
+
+.node {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+
+
+}
+
+.circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: steelblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.leftChild {
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: black;
+    top: 25px;
+    transform-origin: left center;
+    transform: translateX(-50%) rotate(-45deg);
+}
+.node .rightChild {
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: black;
+    top: 25px; /* middle of the node vertically */
+    transform-origin: left center;
+    transform: translateX(-50%) rotate(45deg);
+}

@@ -234,19 +234,6 @@ async function partition(barArray, graph, delay, start, end) {
     barArray[end] = temp;
     return i + 1;
 }
-/*
-function createNode(val) {
-    const node = document.createElement("div");
-    node.classList.add("node");
-
-    const value = document.createElement("h3");
-    value.textContent = val;
-    node.appendChild(value);
-
-    const 
-
-}
-*/
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -288,23 +275,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-/*
-    const treeGraph = document.getElementById("tree");
-    const nodeInput = document.getElementById("insert");
-    const generateTree = document.getElementById("generateTree");
-    let treeArr = [];
-    let nodeIdx = 0;
-
-    generateTree.addEventListener("click", async () => {
-        const input = nodeInput.value;
-        treeArr.push(...(input.split(',').map(item => item.trim()).filter(item => item !== "")));
-        for(; nodeIdx < treeArr.length; nodeIdx++) {
-            let currNode = createNode(treeArr[nodeIdx]);
-            treeArr[nodeIdx] = {val: treeArr[nodeIdx], leftChild: -1, rightChild: -1, node: currNode};
-        }
-    });
-
-*/
 });
 
 
