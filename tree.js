@@ -158,6 +158,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const isRoot = tree.root === null;
         const node = new Node(val, isRoot);
         await tree.insert(node);
+        nodeInput.value = "";
+        nodeInput.focus();
     });
 
     document.getElementById("delete-tree").addEventListener("click", () => {

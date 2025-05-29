@@ -180,6 +180,7 @@ async function merge(barArray, graph, delay, left, mid, right) {
 async function insertionSort(barArray, graph, delay){
 
     for(let i = 1; i < barArray.length; i++){
+        if(sortCancelled) return;
         let curr = barArray[i];
         barArray[i].element.style.backgroundColor = "red";
         let j = i - 1;
@@ -242,7 +243,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const generateBtn = document.getElementById("generateBtn");
     const startBtn = document.getElementById("startSort");
-
 
     let barArray = generateBars(graph, 15);
     
