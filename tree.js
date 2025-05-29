@@ -150,6 +150,8 @@ document.addEventListener("DOMContentLoaded", () => {
     generateTree.addEventListener("click", async () => {
         const inpt = nodeInput.value.trim();
         if(!inpt) return;
+        nodeInput.value = "";
+        nodeInput.focus();
         const val = Number(inpt);
         if(Number.isNaN(val)){
             alert("Enter a valid number");
@@ -158,8 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const isRoot = tree.root === null;
         const node = new Node(val, isRoot);
         await tree.insert(node);
-        nodeInput.value = "";
-        nodeInput.focus();
     });
 
     document.getElementById("delete-tree").addEventListener("click", () => {
